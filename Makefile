@@ -1,10 +1,10 @@
-all: tst
+all: trie
 
 DEFS = -DUSE_SOME_DEF
 
-tst: tst.o
-	g++ tst.o -std=c++11 -o tst $(DEFS)
-tst.o: TST.cpp
-	g++ -c TST.cpp -o tst.o -std=c++11 $(DEFS)
+trie: trie.o
+	g++ trie.o -std=c++11 -o tst $(DEFS)
+trie.o: Trie.cpp
+	g++ -c Trie.cpp -o trie.o -std=c++11 $(DEFS)
 clean:
-	rm *.o tst
+	rm *.o trie
